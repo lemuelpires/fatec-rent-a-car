@@ -20,15 +20,19 @@ jobs:
 
       - name: Restaurar as dependencias
         run: dotnet restore
+        working-directory: ./  # Diretório onde o arquivo .sln está localizado
 
       - name: Compilar
         run: dotnet build --no-restore
+        working-directory: ./  # Diretório onde o arquivo .sln está localizado
 
       - name: Testar
         run: dotnet test --no-build --verbosity normal
+        working-directory: ./  # Diretório onde o arquivo .sln está localizado
 
       - name: Empacotar
         run: dotnet publish -c Release -o ./dist --no-build
+        working-directory: ./  # Diretório onde o arquivo .sln está localizado
 
       - name: Publicar Artefatos
         uses: actions/upload-artifact@v4
