@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35013.160
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "fatec-rent.API", "fatec-rent.API\fatec-rent.API.csproj", "{C8C5FDE2-4C0B-47DC-BB6C-3B100F173CFF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fatec-Rent.Test", "Fatec-Rent.Test\Fatec-Rent.Test.csproj", "{EF6E7B8D-874C-4624-848D-A501C3DD43C1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C8C5FDE2-4C0B-47DC-BB6C-3B100F173CFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8C5FDE2-4C0B-47DC-BB6C-3B100F173CFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8C5FDE2-4C0B-47DC-BB6C-3B100F173CFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8C5FDE2-4C0B-47DC-BB6C-3B100F173CFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF6E7B8D-874C-4624-848D-A501C3DD43C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF6E7B8D-874C-4624-848D-A501C3DD43C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF6E7B8D-874C-4624-848D-A501C3DD43C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF6E7B8D-874C-4624-848D-A501C3DD43C1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {232427B2-BFC4-44F2-AB0B-4C2A004721EC}
+	EndGlobalSection
+EndGlobal

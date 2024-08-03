@@ -1,0 +1,6 @@
+@fatec_rent.API_HostAddress = http://localhost:5078
+
+GET {{fatec_rent.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

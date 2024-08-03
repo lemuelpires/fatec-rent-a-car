@@ -1,0 +1,6 @@
+@Fatec_rent_a_car_HostAddress = http://localhost:5118
+
+GET {{Fatec_rent_a_car_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
