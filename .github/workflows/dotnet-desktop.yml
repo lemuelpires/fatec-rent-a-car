@@ -1,0 +1,62 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        working-directory: api
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4 
+
+      - name: Instalar o dotnet
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '8.0.x'
+
+      - name: Restaurar as dependencias
+        run: dotnet restore 
+
+      - name: Compilar
+        run: dotnet build --no-restore
+
+      - name: Testar
+        run: dotnet test --no-build --verbosity normal
+
+      - name: Empacotar
+        run: dotnet publish -c Release -o ./dist --no-build
+
+      - name: Publicar Artefatos
+        uses: actions/upload-artifact@v4
+        with: 
+          name: "API Exportada"
+          path: ./dist
+
+  deploy:
+
+    needs: build
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Download dos artefatos
+        uses: actions/download-artifact@v4
+        with:
+          name: "API Exportada"
+          path: ./dist
+
+      - name: Deploy to Azure
+        uses: azure/webapps-deploy@v2
+        with:
+          app-name: 'fatec-rent-a-car-api'
+          publish-profile: ${{ secrets.PUBLISH_PROFILE }}
+          package: ./dist
